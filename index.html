@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="main.js"></script>
+</head>
+<body>
+    <!-- match card game -->
+
+    <!-- done name page -->
+     <section class="name-page" id="name-page">
+
+        <div class="name-page">
+            <h1>what is your Name ?</h1>
+            <input type="text" name="name" id="name" placeholder="Enter your name">
+            <!-- <input type="submit" value="Start" onclick="myFunction()"> -->
+            <div class="name-btn" id="name-btn" onclick="myFunction()" >start</div>
+        </div>
+    </section> 
+    
+    <!--//////////////////////////////////////-->
+
+    <!-- done login page still the text centre -->
+    <script>
+        function hidefirst() {
+    const playbtn= document.getElementById('first');
+    const seconde=document.getElementById('seconde')
+        if (playbtn.style.display === "none") {
+          playbtn.style.display = "block";
+          document.getElementById('start-btn').click()
+         
+          
+        } else {
+          playbtn.style.display = "none";
+          seconde.style.display = "block";
+          seconde.style.visibility = "visible";
+          document.getElementById('start-btn').click();
+        }
+      }
+    </script>
+    <section class="first" id="first">
+
+        <div class="login-page">
+            <h1>welcome to Mtchny</h1>
+            <div class="login-btn">
+                <div id="play-btn" onclick="hidefirst()" class="play">Play</div>
+                <div class="scores">
+                    Scores
+                </div>
+                
+            </div>
+        </div>
+    </section>
+    <!--//////////////////////////////////////-->
+    <section class="seconde" id="seconde">
+
+        <div class="play-page">
+            <!-- header for the game -->
+            <div class="header">
+                <div class="header-logo">
+                    <h3>matching game</h3>
+                </div>
+                <div class="header-score">
+                    <div class="score">
+                        <h3>Score</h3>
+                        <h3 id="score">0</h3>
+                        <div class="chances">
+                            Chances
+                            <div id="currentchances">
+                                0
+                            </div>
+                        </div>
+                    </div>
+                </div>   
+                <div id="timer" class="timer-contanier">
+                    0
+                </div>
+                <div onclick="startBtnF()" id="start-btn" class="start-btn">start</div>     
+            </div>
+       
+            
+               
+
+        <!-- <div class="header-playPage">
+
+        
+        <div class="back-btn">
+            <div class="back">Back</div>
+        </div>
+        <div class="t">Matching Game</div>
+    </div> -->
+        
+    </div>
+    <div class="wrapper">
+        
+        <ul class="cards">
+          <li class="card">
+            <div class="view front-view">
+              <img src="images/que_icon.svg" alt="icon">
+            </div>
+            <div class="view back-view">
+              <img src="images/img-1.png" alt="card-img">
+            </div>
+          </li>
+          <li class="card">
+            <div class="view front-view">
+              <img src="images/que_icon.svg" alt="icon">
+            </div>
+            <div class="view back-view">
+              <img src="images/img-6.png" alt="card-img">
+            </div>
+          </li>
+          <li class="card">
+            <div class="view front-view">
+              <img src="images/que_icon.svg" alt="icon">
+            </div>
+            <div class="view back-view">
+              <img src="images/img-3.png" alt="card-img">
+            </div>
+          </li>
+          <li class="card">
+            <div class="view front-view">
+              <img src="images/que_icon.svg" alt="icon">
+            </div>
+            <div class="view back-view">
+              <img src="images/img-2.png" alt="card-img">
+            </div>
+          </li>
+          <li class="card">
+            <div class="view front-view">
+              <img src="images/que_icon.svg" alt="icon">
+            </div>
+            <div class="view back-view">
+              <img src="images/img-1.png" alt="card-img">
+            </div>
+          </li>
+          <li class="card">
+            <div class="view front-view">
+              <img src="images/que_icon.svg" alt="icon">
+            </div>
+            <div class="view back-view">
+              <img src="images/img-5.png" alt="card-img">
+            </div>
+          </li>
+          <li class="card">
+            <div class="view front-view">
+              <img src="images/que_icon.svg" alt="icon">
+            </div>
+            <div class="view back-view">
+              <img src="images/img-2.png" alt="card-img">
+            </div>
+          </li>
+          <li class="card">
+            <div class="view front-view">
+              <img src="images/que_icon.svg" alt="icon">
+            </div>
+            <div class="view back-view">
+              <img src="images/img-6.png" alt="card-img">
+            </div>
+          </li>
+          <li class="card">
+            <div class="view front-view">
+              <img src="images/que_icon.svg" alt="icon">
+            </div>
+            <div class="view back-view">
+              <img src="images/img-3.png" alt="card-img">
+            </div>
+          </li>
+          <li class="card">
+            <div class="view front-view">
+              <img src="images/que_icon.svg" alt="icon">
+            </div>
+            <div class="view back-view">
+              <img src="images/img-4.png" alt="card-img">
+            </div>
+          </li>
+          <li class="card">
+            <div class="view front-view">
+              <img src="images/que_icon.svg" alt="icon">
+            </div>
+            <div class="view back-view">
+              <img src="images/img-5.png" alt="card-img">
+            </div>
+          </li>
+          <li class="card">
+            <div class="view front-view">
+              <img src="images/que_icon.svg" alt="icon">
+            </div>
+            <div class="view back-view">
+              <img src="images/img-4.png" alt="card-img">
+            </div>
+          </li>
+          <li class="card">
+            <div class="view front-view">
+              <img src="images/que_icon.svg" alt="icon">
+            </div>
+            <div class="view back-view">
+              <img src="images/img-4.png" alt="card-img">
+            </div>
+          </li>
+          <li class="card">
+            <div class="view front-view">
+              <img src="images/que_icon.svg" alt="icon">
+            </div>
+            <div class="view back-view">
+              <img src="images/img-4.png" alt="card-img">
+            </div>
+          </li>
+          <li class="card">
+            <div class="view front-view">
+              <img src="images/que_icon.svg" alt="icon">
+            </div>
+            <div class="view back-view">
+              <img src="images/img-4.png" alt="card-img">
+            </div>
+          </li>
+          <li class="card">
+            <div class="view front-view">
+              <img src="images/que_icon.svg" alt="icon">
+            </div>
+            <div class="view back-view">
+              <img src="images/img-4.png" alt="card-img">
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+  
+
+
+
+
+</body>
+</html>
