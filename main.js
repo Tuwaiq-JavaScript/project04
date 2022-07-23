@@ -130,8 +130,8 @@ function startTimer() {
 }
 // hide and show div
 function myFunction() {
-	var x = document.getElementById('name-page');
-	var y = document.getElementById('first');
+	var x = document.getElementById('first');
+	var y = document.getElementById('name-page');
 	if (x.style.display === 'block') {
 		x.style.display = 'none';
         y.style.display = 'block';

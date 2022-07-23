@@ -175,6 +175,10 @@ html {
 }
 
 .seconde{
-    display: none;
-    visibility: hidden;
+    display: none; 
+     visibility: visible;
+}
+.first{
+  display: none; 
+  visibility: visible;
 }
