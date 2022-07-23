@@ -182,3 +182,19 @@ html {
   display: none; 
   visibility: visible;
 }
+.score-page{
+  display: none; 
+  visibility: visible;
+}
+.score-page{
+  
+  background-color: rgb(23, 50, 50);
+  height: 60%;
+  width: 70%;
+}
+.title{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+}

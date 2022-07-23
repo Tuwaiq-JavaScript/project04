@@ -16,11 +16,16 @@
 
         <div class="name-page">
             <h1>what is your Name ?</h1>
-            <input type="text" name="name" id="name" placeholder="Enter your name">
-            <!-- <input type="submit" value="Start" onclick="myFunction()"> -->
+            <input type="text" name="name" id="name" placeholder="Enter your name" >
+            <script>
+              // let name = document.getElementById('name').innerText;
+              // console.log(name);
+            </script>
+           
             <div class="name-btn" id="name-btn" onclick="myFunction()" >start</div>
         </div>
     </section> 
+    
     
     <!--//////////////////////////////////////-->
 
@@ -41,6 +46,21 @@
           document.getElementById('start-btn').click();
         }
       }
+      function hideseconde() {
+    const playbtn= document.getElementById('first');
+    const seconde=document.getElementById('score-page')
+        if (playbtn.style.display === "none") {
+          playbtn.style.display = "block";
+          seconde.style.visibility = "hidden";
+         
+          
+        } else {
+          playbtn.style.display = "none";
+          seconde.style.display = "block";
+          seconde.style.visibility = "visible";
+         
+        }
+      }
     </script>
     <section class="first" id="first" >
 
@@ -49,7 +69,7 @@
             <div class="login-btn">
                 <div id="play-btn" onclick="hidefirst()" class="play">Play</div>
                 <div class="scores">
-                    Scores
+                  <div id="scores-btn" onclick="hideseconde()" class="scores">scores</div>
                 </div>
                 
             </div>
@@ -62,7 +82,8 @@
             <!-- header for the game -->
             <div class="header">
                 <div class="header-logo">
-                    <h3>matching game</h3>
+                    <h3>matching game </h3>
+              
                 </div>
                 <div class="header-score">
                     <div class="score">
@@ -228,6 +249,22 @@
           </li>
         </ul>
       </div>
+    </section>
+
+    <section class="score-page" id="score-page">
+        <div class="score-cont">
+          <div class="title">
+            <p>start time</p>
+            <p>name</p>
+            <p>chances</p>
+            <p>mistakes</p>
+            <p>completion%</p>
+            <p>total time</p>
+          </div>
+          
+
+        </div>
+
     </section>
   
 

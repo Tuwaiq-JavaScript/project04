@@ -1,10 +1,14 @@
 const score = document.getElementById('score');
 const cards = document.querySelectorAll('.card');
+const timerdiv = document.getElementById('timer');
+const startbtn = document.getElementById('start-btn');
+//result
 
 const chances = 15;
 let matched = 0;
 let cardOne, cardTwo;
 let disableDeck = false;
+
 // hide and show sech
 // function hidefirst() {
 //     const playbtn= document.getElementById('play-btn');
@@ -15,11 +19,11 @@ let disableDeck = false;
 //         }
 //       }
 
-
 window.onload = function () {
 	currentChance = chances;
 	document.getElementById('currentchances').innerText = currentChance;
-    
+	let startingTime=new Date().getTime();
+	localStorage.setItem('startingTime', startingTime);
 };
 function flipCard({ target: clickedCard }) {
 	if (cardOne !== clickedCard && !disableDeck) {
@@ -39,8 +43,14 @@ function matchCards(img1, img2) {
 		matched++;
 		score.innerText = matched;
 
-		if (matched == 8) {
-            alert('You won');
+		if (matched == 1) {
+			//
+	let chan= document.getElementById('currentchances').innerText;
+	localStorage.setItem('chances', chan);
+	let thetime= document.getElementById('timer').innerText;
+	localStorage.setItem('time', thetime);
+	let thescore= document.getElementById('score').innerText;
+			alert('You won');
 			setTimeout(() => {
 				return shuffleCard();
 			}, 1000);
@@ -49,20 +59,20 @@ function matchCards(img1, img2) {
 		cardTwo.removeEventListener('click', flipCard);
 		cardOne = cardTwo = '';
 		return (disableDeck = false);
-	} 
+	}
 	setTimeout(() => {
 		cardOne.classList.add('shake');
 		cardTwo.classList.add('shake');
-        document.getElementById('currentchances').innerText = --currentChance;
-        if (currentChance == 0) {
-            document.getElementById('start-btn').click();
-            document.getElementById('start-btn').click();
+		document.getElementById('currentchances').innerText = --currentChance;
+		if (currentChance == 0) {
+			document.getElementById('start-btn').click();
+			document.getElementById('start-btn').click();
 
-            alert('You lost');
-            setTimeout(() => {
-                return shuffleCard();
-            }, 1000);
-        }
+			alert('You lost');
+			setTimeout(() => {
+				return shuffleCard();
+			}, 1000);
+		}
 	}, 400);
 	setTimeout(() => {
 		cardOne.classList.remove('shake', 'flip');
@@ -92,8 +102,7 @@ cards.forEach((card) => {
 });
 
 // timer
-const timerdiv = document.getElementById('timer');
-const startbtn = document.getElementById('start-btn');
+
 
 let didstart = false;
 let timer;
@@ -129,16 +138,25 @@ function startTimer() {
 	}, 500);
 }
 // hide and show div
+
 function myFunction() {
+	let name = document.getElementById('name').value;
+	localStorage.setItem('name', name);
+	console.log(localStorage.getItem('name'));
 	var x = document.getElementById('first');
 	var y = document.getElementById('name-page');
 	if (x.style.display === 'block') {
 		x.style.display = 'none';
-        y.style.display = 'block';
-		
+		y.style.display = 'block';
 	} else {
 		x.style.display = 'block';
-        y.style.display = 'none';
-		
+		y.style.display = 'none';
 	}
+}
+const newscoore = document.getElementById('score-cont');
+
+///////
+
+function addresult() {
+	const result = {};
 }
