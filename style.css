@@ -1,5 +1,5 @@
 body, html {
-  background: #d5dee2 url('../images/bg.jpg') bottom;
+  background: #d5dee2 url('./images/bg.jpg') bottom;
   background-size: cover;
   color: aliceblue;
   width: 100%;
