@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>project04</title>
+    
+</head>
+<body>
+    
+ <div class="page1">
+        <header class="header">
+            <h1>Welcome to Matching Game</h1>
+        </header>
+    <div class="home-page">
+        <div><button id="play" class="btn-paly">Play</button></div>
+        <div><button id="scores" class="btn-scores">Scores</button></div>
+    </div>
+</div>
+
+<div class="page2 page-hidden">
+    <header class="header">
+        <h1>What is Your Name</h1>
+    </header>
+    <div class="name-page">
+        <div>
+            <label class="name" for="">Name :</label>
+            <input id="myInput" class="input" type="text" placeholder="e.g. omar">
+        </div>
+        <div><button id="continue" class="btn-paly">continue</button></div>
+    </div>
+</div>
+
+<div class="page3 page-hidden">
+    <button id="back1" class="fa fa-arrow-left back-btn"></class=><span class="left">Back</span></button>
+    <header class="header">
+        <h1>Your Scores</h1>
+    </header>
+   <div class="score-container">
+    <div class="info">
+        <p>Start Time</p>
+        <p>Name</p>
+        <p>Attempts</p>
+        <p>Mistakes</p>
+        <p>Completion <br> Percentage</p>
+        <p>Total Time</p>
+    </div>
+    <div id="output" class="gap">
+        <div class="api-info">
+            <span>10:45</span>
+            <span>omar</span>
+            <span>26</span>
+            <span>10</span>
+            <span>70%</span>
+            <span>100%</span>
+        </div> 
+    </div>
+    
+   </div>
+</div>
+    <div class="page4 page-hidden">
+        <button id="back2" class="fa fa-arrow-left back-btn"></class=><span class="left">Back</span></button>
+        <header class="header">
+            <h1>Matching Game</h1>
+        </header>
+        <div class="game-info">
+            <div class="tries">
+                Wrong Tries: <span>0</span>
+              </div>
+            <div>
+                <ul id="harts" class="hart">
+                    Lifes <br>
+                    <li id="hart1" class="fa fa-heart"></li>
+                    <li id="hart2" class="fa fa-heart"></li>
+                    <li id="hart3" class="fa fa-heart"></li>
+                </ul>
+            </div>
+            <button  id="restart" class="restart-btn"><img src="./imge/refresh-arrow.png" alt="">Restart</button>
+            <div>
+                Timer <br> 
+                <span id="timer"></span>
+            </div>
+        </div>
+    
+    <div class="Matching-Game-blocks"> 
+        <div class="game-block" data-technology="facebook">
+           <div class="face front"></div>
+           <div class="face back">
+            <img class="facebook" src="./imge/facebook (1).png" alt="">
+           </div>
+        </div>
+        <div class="game-block" data-technology="facebook">
+            <div class="face front"></div>
+            <div class="face back">
+             <img class="facebook" src="./imge/facebook (1).png" alt="">
+            </div>
+         </div>
+         <div class="game-block" data-technology="instagram">
+            <div class="face front"></div>
+            <div class="face back">
+             <img class="instagram" src="./imge/instagram (1).png" alt="">
+            </div>
+         </div>
+         <div class="game-block" data-technology="instagram">
+             <div class="face front"></div>
+             <div class="face back">
+              <img class="instagram"  src="./imge/instagram (1).png" alt="">
+             </div>
+          </div>
+          <div class="game-block" data-technology="linkedin">
+            <div class="face front"></div>
+            <div class="face back">
+             <img class="linkedin"  src="./imge/linkedin.png" alt="">
+            </div>
+         </div>
+         <div class="game-block" data-technology="linkedin">
+             <div class="face front"></div>
+             <div class="face back">
+              <img class="linkedin" src="./imge/linkedin.png" alt="">
+             </div>
+          </div>
+          <div class="game-block" data-technology="snapchat">
+            <div class="face front"></div>
+            <div class="face back">
+             <img class="snapchat" src="./imge/snapchat (1).png" alt="">
+            </div>
+         </div>
+         <div class="game-block" data-technology="snapchat">
+             <div class="face front"></div>
+             <div class="face back">
+              <img class="snapchat" src="./imge/snapchat (1).png" alt="">
+             </div>
+          </div>
+          <div class="game-block" data-technology="tik-tok">
+            <div class="face front"></div>
+            <div class="face back">
+             <img class="tik-tok" src="./imge/tik-tok.png" alt="">
+            </div>
+         </div>
+         <div class="game-block" data-technology="tik-tok">
+             <div class="face front"></div>
+             <div class="face back">
+              <img class="tik-tok" src="./imge/tik-tok.png" alt="">
+             </div>
+          </div>
+          <div class="game-block" data-technology="twitter">
+            <div class="face front"></div>
+            <div class="face back">
+             <img class="twitter" src="./imge/twitter (1).png" alt="">
+            </div>
+         </div>
+         <div class="game-block" data-technology="twitter">
+             <div class="face front"></div>
+             <div class="face back">
+              <img class="twitter" src="./imge/twitter (1).png" alt="">
+             </div>
+          </div>
+          <div class="game-block" data-technology="whatsapp">
+            <div class="face front"></div>
+            <div class="face back">
+             <img class="whatsapp" src="./imge/whatsapp.png" alt="">
+            </div>
+         </div>
+         <div class="game-block" data-technology="whatsapp">
+             <div class="face front"></div>
+             <div class="face back">
+              <img class="whatsapp" src="./imge/whatsapp.png" alt="">
+             </div>
+            </div>
+             <div class="game-block" data-technology="youtube">
+                <div class="face front"></div>
+                <div class="face back">
+                 <img class="youtube" src="./imge/youtube.png" alt="">
+                </div>
+             </div>
+             <div class="game-block" data-technology="youtube">
+                 <div class="face front"></div>
+                 <div class="face back">
+                  <img class="youtube" src="./imge/youtube.png" alt="">
+                 </div>
+          </div>
+          
+    </div>
+</div>
+<script  src="main.js"></script>
+</body>
+</html>
+
