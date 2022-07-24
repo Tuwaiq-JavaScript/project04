@@ -1,5 +1,12 @@
 # Project 4
 
+## link of project04 front-end
+- https://essa433.github.io/project04/
+## Link of The Project04-api
+- https://essa433.github.io/matching-game-api/
+
+
+
 In light of recent events your company have discovered that they need to release some pressure of their employees and they needed a quick way to do so, therefore you are tasked with creating a game similar to this [design](https://www.figma.com/file/01FHtd0tROgruHCKveKOqc/Emoji-Memory?node-id=1%3A47) but better (the company's UI/UX designer was depressed and busy)
 ## welcome screen
 ![welcome](./assets/Login%20Screen.png)
