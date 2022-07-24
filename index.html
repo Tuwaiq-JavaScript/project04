@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   
+    <title>Memory Game</title>
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    >
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css" />
+    <script src="./packages/bson.bundle.js"></script>
+</head>
+<body>
+    
+ 
+    
+<div class="wrapper">
+  <!-- secound page  -->
+      <div class="stats-container">
+        <div id="moves-count"></div>
+        <div id="time"></div>
+      </div>
+      <div class="game-container"></div>
+      <button id="stop" class="hide">Stop Game</button>
+    </div>
+  
+    <!-- third page  -->
+        <div class="controls-container">
+
+               <div id="Page2" style="display:none">
+       
+            <p id="result"></p>
+            <button id="start">Start Game</button><br><br>
+           <button style="width:180px"> <h2 style="text-align: center; "> <a href="#" onclick="return show('Page3','Page2');">score</a></h2> </button>
+          
+    </div> 
+
+          <div id="Page1">
+            <div><h1>what is your Name</h1> </div><br><b>
+              <input class="inputVal" type="text" placeholder="Add your name" value="" width="50px" style="text-align: center; margin-left: 45px;">   <br><br> 
+           <h2 style="text-align: center; "> <a href="#" onclick="return show('Page2','Page1');">Lets play</a></h2>
+          </div>
+            
+     
+    <div id="Page3" style="display:none">
+    
+     <button><h2 style="text-align: center; "> <a href="#" onclick="return show('Page2','Page3');">back to start page </a></button> 
+
+        <div></div>
+      </h2>
+</div>
+
+    <!-- Script -->
+    <script src="script.js"></script>
+  </body>
+</html>
