@@ -51,7 +51,7 @@ function matchCards(img1, img2) {
 		matched++;
 		score.innerText = matched;
 
-		if (matched == 1) {
+		if (matched == 8) {
 			//
 			let chan = document.getElementById('currentchances').innerText;
 			 localStorage.setItem('chances', chan);
