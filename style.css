@@ -699,42 +699,40 @@ h1 {
         margin: 5px auto 5px auto;
     }
 
+    /* ---------------- Score Page ----------------- */
 
-}
+    .scores-page {
+        display: none;
+    }
 
-/* ---------------- Score Page ----------------- */
+    .containar {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
 
-.scores-page {
-    display: none;
-}
+    }
 
-.containar {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-
-}
-
-.content-game {
-    display: flex;
-    flex-direction: row;
-    gap: 35px;
-    /* align-items: center;
+    .content-game {
+        display: flex;
+        flex-direction: row;
+        gap: 35px;
+        /* align-items: center;
     justify-content: center;
     gap: 35px; 
     color: white;
     width: 100%; */
-}
+    }
 
-.result-game {
-    display: flex;
-    flex-direction: row;
-    background-color: white;
-    opacity: 0.5;
-    color: black;
-    border-radius: 10px;
-    gap: 35px;
-    padding: 10px 10px;
-    margin: 10px 10px;
+    .result-game {
+        display: flex;
+        flex-direction: row;
+        background-color: white;
+        opacity: 0.5;
+        color: black;
+        border-radius: 10px;
+        gap: 35px;
+        padding: 10px 10px;
+        margin: 10px 10px;
+    }
 }
