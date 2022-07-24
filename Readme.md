@@ -1,5 +1,8 @@
 # Project 4
 
+##Link of the project 
+https://lamisab.github.io/project04/
+
 In light of recent events your company have discovered that they need to release some pressure of their employees and they needed a quick way to do so, therefore you are tasked with creating a game similar to this [design](https://www.figma.com/file/01FHtd0tROgruHCKveKOqc/Emoji-Memory?node-id=1%3A47) but better (the company's UI/UX designer was depressed and busy)
 ## welcome screen
 ![welcome](./assets/welcome%20screen.png)
