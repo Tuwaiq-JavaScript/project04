@@ -1,0 +1,362 @@
+
+ body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Coda';
+    color: rgb(250, 246, 246);
+    background: linear-gradient(-45deg, #ffffff, #3f3793, #050519, #000000);
+    background-size: 400% 400%;
+    -webkit-animation: Gradient 50s ease infinite;
+    -moz-animation: Gradient 50s ease infinite;
+    -o-animation: Gradient 50s ease infinite;
+    animation: Gradient 10s ease infinite;
+}
+
+  .Back {
+    background-color: #000000;
+    color: rgb(250, 249, 249);
+    margin-right: 700px;
+    
+
+  }
+  .next {
+    background-color: #53499d;
+    color: white;
+  }
+  a {
+  
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 5px;
+    display: flex;
+    justify-content: center;
+    border-radius: 10px;
+
+  }
+  .section{
+    padding-top: 15%;
+    width: 100%;
+    height: 100%;
+    max-width: 800px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .input-name{
+  width: 235px;
+  height: 36px;
+  margin-bottom: 20px;
+  }
+.container {
+    width: 100%;
+    height: 100%;
+    max-width: 800px;
+    margin: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+.game-heading {
+    font-weight: 500;
+}
+
+/*
+ * Styles for the deck of cards
+ */
+
+.deck {
+    width: 660px;
+    height: 100%;
+    min-height: 400px;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: space-evenly;
+    -ms-flex-pack: space-evenly;
+    justify-content: space-evenly;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    
+}
+
+.card {
+    height: 120px;
+    width: 120px;
+    margin: 10px;
+    background: #f9fafa;
+    font-size: 0;
+    color: #ffffff;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+            align-items: center;
+            transform-style: preserve-3d;
+    /* animations card */
+    -webkit-transition:
+    font-size 0.3s cubic-bezier(0.61,-0.19, 0.7,-0.11),
+    background 0.5s,
+    -webkit-transform 0.7s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+    -moz-transition:
+    font-size 0.3s cubic-bezier(0.61,-0.19, 0.7,-0.11),
+    background 0.5s,
+    -moz-transform 0.7s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+    -o-transition:
+    font-size 0.3s cubic-bezier(0.61,-0.19, 0.7,-0.11),
+    transform 0.7s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+    background 0.5s;
+
+    transition:
+    font-size 0.3s cubic-bezier(0.61,-0.19, 0.7,-0.11),
+    transform 0.7s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+    background 0.5s,
+    -webkit-transform 0.7s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.card.open .fab {
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
+    -ms-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+}
+
+.card.open {
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
+    -ms-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+    background: #7d8aff;
+    cursor: default;
+}
+
+.card.show {
+    font-size: 3em;
+}
+
+.card.match {
+    cursor: default;
+    background: #489e7c;
+    font-size: 3em;
+}
+
+/*
+ * Styles for the Score header
+ */
+.score-header {
+    text-align: left;
+    width: 70%;
+    padding: 0 35px;
+    margin-bottom: 10px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+#score {
+    display: inherit;
+    text-align: center;
+}
+
+.hearts {
+    padding: 0;
+    display: inline-block;
+    margin: 0 5px 0 0;
+}
+
+.heart {
+    list-style-type: none;
+    display: inline-block;
+    color: #ff0000;
+}
+
+/* .empty-heart {
+    color: transparent;
+    -webkit-text-stroke-width: 1.5px;
+    -webkit-text-stroke-color: #f3dede;
+} */
+
+.hearts {
+    display: inline-block;
+}
+
+
+#restart {
+    text-align: center;
+    cursor: pointer;
+}
+
+#restart i {
+    padding-left: 5px;
+}
+
+/*
+ * Styles for the modal
+ */
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index:1;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.modal-content {
+    width: 60%;
+    margin: 20% auto;
+    border-radius: 8px;
+    background-color:#f4f4f4;
+    animation-duration: 2s;
+}
+
+.modal-header {
+    padding:15px;
+    color:#fff;
+}
+
+.modal-header h2 {
+    text-align: center;
+    margin:0;
+}
+
+.modal-close-btn {
+    float: right;
+    font-size: 1.5em;
+    color:#fff;
+}
+
+.modal-close-btn:hover, .modal-close-btn:focus {
+    color:#000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-body {
+    color: black;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+.replay {
+    padding: 1em;
+}
+
+.modal-replay-btn {
+    display: block;
+    background-color: #8c4ed6;
+    color: white;
+    font-size: 16px;
+    font-weight: normal;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 8px;
+    margin: auto;
+
+}
+
+@media screen and (max-width: 735px) {
+    .container {
+        width: 100%;
+    }
+
+    .deck {
+        width: 90%;
+    }
+
+    .card {
+        width: 90px;
+        height: 90px;
+    }
+}
+@media screen and (max-width: 550px) {
+    .game-heading {
+        margin-bottom: 0;
+    }
+
+    .card {
+        width: 90px;
+        height: 90px;
+    }
+
+    .score-header {
+        display:inline-block;
+    }
+
+    #score {
+        margin: 10px auto;
+    }
+
+    #timer {
+        margin: 10px auto;
+    }
+
+    #restart {
+        margin: 10px auto;
+    }
+
+    .card.show {
+        font-size: 2em;
+    }
+}
+
+/*
+ * Backgroudn color animations
+ */
+
+@-webkit-keyframes Gradient {
+    0% {
+        background-position: 0% 50%
+    }
+    50% {
+        background-position: 100% 50%
+    }
+    100% {
+        background-position: 0% 50%
+    }
+}
+
+@keyframes Gradient {
+    0% {
+        background-position: 0% 50%
+    }
+    50% {
+        background-position: 100% 50%
+    }
+    100% {
+        background-position: 0% 50%
+    }
+}
+
+
