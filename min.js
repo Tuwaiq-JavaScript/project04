@@ -151,21 +151,18 @@ attachEventListeners()
 
 // //---------- api ----------------
 
-async function upsertTask(MatchingGame) {
+
+async function upsertTask(Records) {
     await fetch(`http://127.0.0.1:3009/records`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(MatchingGame),
+      body: JSON.stringify(Records),
     })
-    localStorage.setItem("oneGame", JSON.stringify(MatchingGame))
+    localStorage.setItem("oneGame", JSON.stringify(Records))
   }
   
   async function getAllGames() {
     const result = await fetch("http://127.0.0.1:3009/records")
     const response = await result.json()
-    for (let i = 0; i < result.length; i++) {
-      var element = document.createElement("div")
-      element.appendChild(document.createTextNode("The man who mistook his wife for a hat"))
-      document.getElementById("lc").appendChild(element)
-    }
+    
 }
