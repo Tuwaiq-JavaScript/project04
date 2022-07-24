@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
+    <link rel="stylesheet prefetch" href="https://fonts.googleapis.com/css?family=Coda">
+    <link rel="stylesheet" href="styles.css">
+    <title>Memory Game</title>
+</head>
+
+<body>
+    <div class="container">
+        
+        <header>
+            <h1 class="game-heading">Memory Game</h1>
+            
+        </header>
+        <a href="welcome.html" class="Back">&laquo; Back</a>
+        <div class="score-header">
+            <div id="score">
+                <ul class="hearts">
+                    <li class="heart">
+                        <i class="fa fa-heart"></i>
+                    </li>
+                    <li class="heart">
+                        <i class="fa fa-heart"></i>
+                    </li>
+                    <li class="heart">
+                        <i class="fa fa-heart"></i>
+                    </li>
+                </ul>
+                <div class="Lifes">
+                    <span class="Lifes-text"> Lifes</span>
+                </div>
+            </div>
+            <!--  -->
+            <div id="info-btn" class="hint">
+                <span><i class="fa fa-info"></i> Info</span>
+              </div>
+            
+            <div id="timer">
+                <span class="hours">00</span> :
+                <span class="minutes">00</span> :
+                <span class="seconds">00</span>
+            </div>
+            <div id="restart">
+                <span><i class="fas fa-sync-alt"></i> Reset </span>
+            </div>
+        </div>
+        <ul class="deck">
+            <li class="card">
+                <i class="fab"></i>
+            </li>
+            <li class="card">
+                <i class="fab"></i>
+            </li>
+            <li class="card">
+                <i class="fab"></i>
+            </li>
+            <li class="card">
+                <i class="fab"></i>
+            </li>
+            <li class="card">
+                <i class="fab"></i>
+            </li>
+            <li class="card">
+                <i class="fab"></i>
+            </li>
+            <li class="card">
+                <i class="fab"></i>
+            </li>
+            <li class="card">
+                <i class="fab"></i>
+            </li>
+            <li class="card">
+                <i class="fab"></i>
+            </li>
+            <li class="card">
+                <i class="fab"></i>
+            </li>
+            <li class="card">
+                <i class="fab"></i>
+            </li>
+            <li class="card">
+                <i class="fab"></i>
+            </li>
+            <li class="card">
+                <i class="fab"></i>
+            </li>
+            <li class="card">
+                <i class="fab"></i>
+            </li>
+            <li class="card">
+                <i class="fab"></i>
+            </li>
+            <li class="card">
+                <i class="fab"></i>
+            </li>
+        </ul>
+    </div>
+    <div id="simpleModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="modal-close-btn">&times;</span>
+                <h2>Congratulations!</h2>
+            </div>
+            <div class="modal-body">
+                <h3>You completed the game successfully!</h3>
+                <p>It took you
+                    <span class="hours"></span>
+                    <span class="mins"></span>
+                    <span class="seconds"></span> &
+                    <span class="Lifes-count"></span> to finish the game.
+                </p>
+            </div>
+            <div class="replay">
+                <button type="button" class="modal-replay-btn">
+                    Replay!
+                </button>
+            </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>
