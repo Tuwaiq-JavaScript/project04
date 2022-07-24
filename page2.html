@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Page Title</title>
+    <link rel="stylesheet" href="./css/style.css"/>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+          rel="stylesheet">
+    <script src="https://kit.fontawesome.com/12f9c0d1e0.js" crossorigin="anonymous"></script>
+
+    <script src="./packages/bson.bundle.js"></script>
+</head>
+<body>
+
+    <div class="timer" id="js_timer">
+        <h1 class="match">Matching Game</h1>
+        <a href="page3.html"><button class="back"><i class="fa-solid fa-left-long"></i> back</button> <br></a>
+        <a href="page2.html"><button class="restar"><img src="./images/Vector.png" alt=""> restar</button> <br></a>
+
+
+
+
+        <div>
+            <div id="timer">
+
+                <h3 class="time">timer<br>
+                    00.00
+                </h3>
+            </div>
+            <div class="tries">
+                Wrong Tries: <span>0</span>
+              </div>
+                <ion-icon name="time-outline"></ion-icon>
+        </div>
+    <div class="container">
+        <ul class="cards">
+            <li class="card">
+                <div class="view front-view"></div>
+                <div class="view back-view">
+                    <img src="images/img-1.png" alt="card-image">
+                </div>
+            </li>
+            <li class="card">
+                <div class="view front-view"></div>
+                <div class="view back-view">
+                    <img src="images/img-2.png" alt="card-image">
+                </div>
+            </li>
+            <li class="card">
+                <div class="view front-view"></div>
+                <div class="view back-view">
+                    <img src="images/img-3.png" alt="card-image">
+                </div>
+            </li>
+            <li class="card">
+                <div class="view front-view"></div>
+                <div class="view back-view">
+                    <img src="images/img-4.png" alt="card-image">
+                </div>
+            </li>
+            <li class="card">
+                <div class="view front-view"></div>
+                <div class="view back-view">
+                    <img src="images/img-5.png" alt="card-image">
+                </div>
+            </li>
+            <li class="card">
+                <div class="view front-view"></div>
+                <div class="view back-view">
+                    <img src="images/img-6.png" alt="card-image">
+                </div>
+            </li>
+            <li class="card">
+                <div class="view front-view"></div>
+                <div class="view back-view">
+                    <img src="images/img-7.png" alt="card-image">
+                </div>
+            </li>
+            <li class="card">
+                <div class="view front-view"></div>
+                <div class="view back-view">
+                    <img src="images/img-8.png" alt="card-image">
+                </div>
+            </li>
+
+            <li class="card">
+                <div class="view front-view"></div>
+                <div class="view back-view">
+                    <img src="images/img-1.png" alt="card-image">
+                </div>
+            </li>
+            <li class="card">
+                <div class="view front-view"></div>
+                <div class="view back-view">
+                    <img src="images/img-2.png" alt="card-image">
+                </div>
+            </li>
+            <li class="card">
+                <div class="view front-view"></div>
+                <div class="view back-view">
+                    <img src="images/img-3.png" alt="card-image">
+                </div>
+            </li>
+            <li class="card">
+                <div class="view front-view"></div>
+                <div class="view back-view">
+                    <img src="images/img-4.png" alt="card-image">
+                </div>
+            </li>
+            <li class="card">
+                <div class="view front-view"></div>
+                <div class="view back-view">
+                    <img src="images/img-5.png" alt="card-image">
+                </div>
+            </li>
+            <li class="card">
+                <div class="view front-view"></div>
+                <div class="view back-view">
+                    <img src="images/img-6.png" alt="card-image">
+                </div>
+            </li>
+            <li class="card">
+                <div class="view front-view"></div>
+                <div class="view back-view">
+                    <img src="images/img-7.png" alt="card-image">
+                </div>
+            </li>
+            <li class="card">
+                <div class="view front-view"></div>
+                <div class="view back-view">
+                    <img src="images/img-8.png" alt="card-image">
+                </div>
+            </li>
+        </ul>
+    </div>
+
+
+
+    <script  src="main.js"></script>
+</body>
+</html>

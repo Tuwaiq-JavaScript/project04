@@ -1,0 +1,36 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: linear-gradient(-135deg, #c850c0, #4158d0);
+
+}
+h1{
+    margin-top: -40%;
+}
+.back{
+    border: none;
+    color: white;
+    padding: 10px ;
+    border-radius: 20px;
+    margin-left: -300px;
+    position: relative;
+    top: -290px;
+
+    
+    font-size: 16px;
+    background-color: #4158d0;
+
+}
+.score > .info {
+	display: flex;
+	justify-content: space-between;
+	gap: 25px;
+    
+}
