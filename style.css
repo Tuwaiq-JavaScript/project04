@@ -1,0 +1,79 @@
+body{
+    display: flex;
+    align-items: center;
+    background-color:pink;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+}
+
+.heading{
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+    font-size: 2rem;
+    font-weight: 500;
+}
+.cards{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap: 2em;
+}
+.card{
+    height: 110px;
+    width: 90px;
+    background-color:orchid;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s all ease;
+
+}
+.card:hover{
+    transform: scale(1.03);
+}
+.card img{
+    width: 100%;
+   height:100%;
+   opacity: 0;
+  
+}
+.card.clicked{
+    background-color: blueviolet;
+}
+.card .clicked{
+    background-color: lightgreen;
+}
+.card.clicked img,
+.card.checked img{
+
+    opacity: 1;
+}
+.card.shake{
+    background-color: burlywood;
+    animation: shake 0.5s;
+}
+@keyframes shake {
+
+    
+}
+.button{
+    background-color:plum;
+    border: none;
+    color: white;
+    padding: 5px 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
