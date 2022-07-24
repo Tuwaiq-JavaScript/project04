@@ -147,13 +147,13 @@ function checkMatch() {
             closeCard(last);
             closeCard(preLast);
         }
-        incrementMove();
+        incrementLifes();
         openCards = [];
         checkGameWin();
     }
 }
-
-function incrementMove() {
+// not working
+function incrementLifes() {
     Lifes++;
     LifesCount.textContent = Lifes;
     if (Lifes === 1) {
@@ -230,9 +230,7 @@ function resetDeck() {
 
     // Iterate over all cards
     cards.forEach((card, index) => {
-        // Remove classes
-        card.classList.remove('open', 'show', 'match', 'bounceIn');
-        // Remove symbols
+        card.classList.remove('open', 'show', 'match');
         removeClassByPrefix(card.children[0], 'fa-');
 
         // Attach new symbols to cards
@@ -256,9 +254,6 @@ function closeModal() {
 
 /* ----------- Helper functions ----------- */
 
-/*
-* @description Removes element's class based on pattern
-*/
 function removeClassByPrefix(el, prefix, replace = '') {
     var regx = new RegExp('\\b' + prefix + '(.*)?\\b', 'g');
     el.className = el.className.replace(regx, replace);
