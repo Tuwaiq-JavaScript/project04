@@ -3,27 +3,35 @@ const cards = document.querySelectorAll('.card');
 const timerdiv = document.getElementById('timer');
 const startbtn = document.getElementById('start-btn');
 //result
+let tasks = [];
+//obbject to send the item
+const newTask = {
+	 play_id: new BSON.ObjectID(),
+	name: '',
+	startingTime: '',
+	time: '',
+	chances: '',
+};
+async function added() {
+await upsertTask(newTask);
+tasks.push(newTask);
+console.log(tasks);
+}
 
 const chances = 15;
 let matched = 0;
 let cardOne, cardTwo;
 let disableDeck = false;
 
-// hide and show sech
-// function hidefirst() {
-//     const playbtn= document.getElementById('play-btn');
-//         if (playbtn.style.display === "none") {
-//           playbtn.style.display = "block";
-//         } else {
-//           playbtn.style.display = "none";
-//         }
-//       }
+
 
 window.onload = function () {
 	currentChance = chances;
 	document.getElementById('currentchances').innerText = currentChance;
-	let startingTime=new Date().getTime();
+	let startingTime = new Date().getTime();
 	localStorage.setItem('startingTime', startingTime);
+	let x=localStorage.getItem('startingTime');
+	newTask.startingTime = x;
 };
 function flipCard({ target: clickedCard }) {
 	if (cardOne !== clickedCard && !disableDeck) {
@@ -45,12 +53,21 @@ function matchCards(img1, img2) {
 
 		if (matched == 1) {
 			//
-	let chan= document.getElementById('currentchances').innerText;
-	localStorage.setItem('chances', chan);
-	let thetime= document.getElementById('timer').innerText;
-	localStorage.setItem('time', thetime);
-	let thescore= document.getElementById('score').innerText;
+			let chan = document.getElementById('currentchances').innerText;
+			 localStorage.setItem('chances', chan);
+			let x=localStorage.getItem('chances');
+			 newTask.chances = x;
+			
+			let thetime = document.getElementById('timer').innerText;
+			localStorage.setItem('time', thetime);
+			let y=localStorage.getItem('time');
+			newTask.time = y;
+			let thescore = document.getElementById('score').innerText;
+			localStorage.setItem('score', thescore);
+			let z=localStorage.getItem('score');
+			newTask.score = z;
 			alert('You won');
+			added();
 			setTimeout(() => {
 				return shuffleCard();
 			}, 1000);
@@ -103,7 +120,6 @@ cards.forEach((card) => {
 
 // timer
 
-
 let didstart = false;
 let timer;
 
@@ -139,10 +155,11 @@ function startTimer() {
 }
 // hide and show div
 
-function myFunction() {
+function myF() {
 	let name = document.getElementById('name').value;
 	localStorage.setItem('name', name);
-	console.log(localStorage.getItem('name'));
+	let n=localStorage.getItem('name');
+	newTask.name = n;
 	var x = document.getElementById('first');
 	var y = document.getElementById('name-page');
 	if (x.style.display === 'block') {
@@ -159,4 +176,18 @@ const newscoore = document.getElementById('score-cont');
 
 function addresult() {
 	const result = {};
+}
+//api setup
+
+async function getAllTasks() {
+	const result = await fetch('http://0.0.0.0:3000/tasks');
+	return await result.json();
+}
+
+async function upsertTask(task) {
+	await fetch(`http://0.0.0.0:3000/tasks`, {
+		method: 'POST',
+		headers: { 'Content-Type': 'application/json' },
+		body: JSON.stringify(task),
+	});
 }
