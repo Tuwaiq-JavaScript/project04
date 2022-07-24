@@ -3,6 +3,7 @@ const oneDiv = document.querySelectorAll('one');
 let cardOne, cardTwo;
 let disableDeck = false;
 let matchedCard = 0; 
+let timer;
 let myTimer = document.querySelectorAll('timer');
 
 
