@@ -265,11 +265,7 @@ function removeClassByPrefix(el, prefix, replace = '') {
     return el;
 }
 
-/*
-* @description Shuffle elements of array
-*
-* Shuffle function from http://stackoverflow.com/a/2450976
-*/
+
 function shuffle(array) {
     var currentIndex = array.length, temporaryValue, randomIndex;
 
@@ -284,11 +280,6 @@ function shuffle(array) {
     return array;
 }
 
-/*
-* @description Convert min, hour & seconds into string
-*
-* Shuffle function from http://stackoverflow.com/a/2450976
-*/
 function stringifyTime(val) {
     var valString = val + '';
     return valString.length >= 2 ? `${val}` : `0${val}`;
