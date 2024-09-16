@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<!-- Coding By CodingNepal - youtube.com/codingnepal -->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">  
+    <title>Memory Card Game in JavaScript | CodingNepal</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+    
+    <!-- First page -->
+    <div id="Page1">
+      <div class="Wellcome">
+        <p style="font-size: 65px;">Wellcome to Matching Game</p>
+        <h2 style="text-align: center;">
+          <button><a  onclick="return show('Page2','Page1')">Play</a></button>
+          <button><a onclick="return show('Page4','Page1')">Scores</a></button>    
+        </h2> 
+      </div>
+    </div>
+    <!-- second page -->
+    <div id="Page2" style="display:none">
+      <div id="begun">
+        <p style="font-size: 65px;">Please enter your name</p>
+        <input class="input-name" type="text" placeholder="e . g . LAMIS ...">
+        <button>
+          <a onclick="return show('Page3','Page2');">NEXT</a>
+        </button>
+      </div>
+      
+    </div>
+    
+    <!-- Third page -->
+    <div id="Page3" style="display:none">
+      <button>
+        <a href="#" onclick="return show('Page1','Page3');">BACK</a>
+      </button> 
+       <div class="container">
+
+      <div class="details">
+          <p class="time">Time: <span><b>30</b>s</span></p>
+          <p class="flips">Flips: <span><b>0</b></span></p>
+          <div id="state" class="invisible" >
+        </div>
+          <p class="timer">Time Take: <span></span><span id="time1">0</span>
+          </p>
+          <button>Refresh</button>
+        </div>
+
+      </div>
+   <div class="wrapper">
+      <ul class="cards">
+        <li class="card">
+          <div class="view front-view">
+            <img src="imgs/shuttle.png" alt="icon">
+          </div>
+          <div class="view back-view">
+            <img src="imgs/diamond.png" alt="card-img">
+          </div>
+        </li>
+        <li class="card">
+          <div class="view front-view">
+            <img src="imgs/shuttle.png" alt="icon">
+          </div>
+          <div class="view back-view">
+            <img src="imgs/gem.png" alt="card-img">
+          </div>
+        </li>
+        <li class="card">
+          <div class="view front-view">
+            <img src="imgs/shuttle.png" alt="icon">
+          </div>
+          <div class="view back-view">
+            <img src="imgs/green.png" alt="card-img">
+          </div>
+        </li>
+        <li class="card">
+          <div class="view front-view">
+            <img src="imgs/shuttle.png" alt="icon">
+          </div>
+          <div class="view back-view">
+            <img src="imgs/orng.png" alt="card-img">
+          </div>
+        </li>
+        <li class="card">
+          <div class="view front-view">
+            <img src="imgs/shuttle.png" alt="icon">
+          </div>
+          <div class="view back-view">
+            <img src="imgs/pupl.png" alt="card-img">
+          </div>
+        </li>
+        <li class="card">
+          <div class="view front-view">
+            <img src="imgs/shuttle.png" alt="icon">
+          </div>
+          <div class="view back-view">
+            <img src="imgs/red.png" alt="card-img">
+          </div>
+        </li>
+        <li class="card">
+          <div class="view front-view">
+            <img src="imgs/shuttle.png" alt="icon">
+          </div>
+          <div class="view back-view">
+            <img src="imgs/gem(1).png" alt="card-img">
+          </div>
+        </li>
+        <li class="card">
+          <div class="view front-view">
+            <img src="imgs/shuttle.png" alt="icon">
+          </div>
+          <div class="view back-view">
+            <img src="imgs/gemstone.png" alt="card-img">
+          </div>
+        </li>
+        <li class="card">
+          <div class="view front-view">
+            <img src="imgs/shuttle.png" alt="icon">
+          </div>
+          <div class="view back-view">
+            <img src="imgs/jjkk.png" alt="card-img">
+          </div>
+        </li>
+        <li class="card">
+          <div class="view front-view">
+            <img src="imgs/shuttle.png" alt="icon">
+          </div>
+          <div class="view back-view">
+            <img src="imgs/blk.png" alt="card-img">
+          </div>
+        </li>
+        <li class="card">
+          <div class="view front-view">
+            <img src="imgs/shuttle.png" alt="icon">
+          </div>
+          <div class="view back-view">
+            <img src="imgs/crystal.png" alt="card-img">
+          </div>
+        </li>
+        <li class="card">
+          <div class="view front-view">
+            <img src="imgs/shuttle.png" alt="icon">
+          </div>
+          <div class="view back-view">
+            <img src="imgs/bj.png" alt="card-img">
+          </div>
+        </li>
+        <li class="card">
+          <div class="view front-view">
+            <img src="imgs/shuttle.png" alt="icon">
+          </div>
+          <div class="view back-view">
+            <img src="imgs/ff.png" alt="card-img">
+          </div>
+        </li>
+        <li class="card">
+          <div class="view front-view">
+            <img src="imgs/shuttle.png" alt="icon">
+          </div>
+          <div class="view back-view">
+            <img src="imgs/diamond1.png" alt="card-img">
+          </div>
+        </li>
+        <li class="card">
+          <div class="view front-view">
+            <img src="imgs/shuttle.png" alt="icon">
+          </div>
+          <div class="view back-view">
+            <img src="imgs/gems.png" alt="card-img">
+          </div>
+        </li>
+        <li class="card">
+          <div class="view front-view">
+            <img src="imgs/shuttle.png" alt="icon">
+          </div>
+          <div class="view back-view">
+            <img src="imgs/gg.png" alt="card-img">
+          </div>
+        </li>
+    </ul>
+      </div>
+      </ul>
+    </div>
+
+    <script src="main.js"></script>
+
+  </body>
+</html>
