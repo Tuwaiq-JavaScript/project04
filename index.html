@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src= "main.js"></script>
+</head>
+<body> 
+  
+   <div id="page1" >
+    <a href="#" onclick="return show('page2','page1');"><button id="start" onclick="play();">Play</button></a>
+  </div>
+    <div  id="page2" style= "display:none;">
+        <a href="#" onclick="return show('page1','page2');"><button id="reset" onclick="back();">Back</button></a>
+        <div class="head-game">
+            <!--<div class="button button-back">
+                 back:<span></span>
+             </div>
+         -->
+             <h1 class="name-game">Matching Game</h1>
+         </div>
+        <!-- info of player-->
+         <div class="container">  
+             <div class="plyer-lives-count">
+                 Lives: <span id="plyer-lives"></span>
+             </div>
+             <!--<div class="button button-res">
+                 Restart: <span></span>
+             </div>--> 
+             <div class="number-minutes">
+                Timer: <span id="time"></span>
+             </div>
+         </div>
+        <!-- blocks of cards-->
+         <section class="blocks-cards">
+         </section>
+    </div>
+    
+</body>
+</html>

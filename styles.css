@@ -1,0 +1,165 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    font-family: Arial, Tahoma, sans-serif;
+    background: #74ebd5;
+    background:-webkit-linear-gradient(to right,#acb6ef, #74ebd5);
+    background:linear-gradient(to right,#acb6ef, #74ebd5);
+}
+/*--------------------------------------------------------------------------------------------*/
+.name-game {
+    color: #8c58b7;
+}
+.number-minutes,.plyer-lives-count{
+    color: #8c58b7;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#page1 span{
+    background: #c7e0f8;
+    color:#0776de;
+    padding:10px;
+    width:55px;
+    margin:3px;
+    display:inline-block;
+    background:#e0e0e0;
+  }
+  
+  #page1 button{
+    font-size: 22px;
+    -webkit-appearance: none;
+    border:none;
+    background-color: #2e80b3;
+    color:white;
+    width:110px;
+    height:55px;
+    justify-content: space-between;
+    transition:0.2s;
+    border-radius:40px;
+    box-shadow: 6px -6px 8px #9d9d9d, -6px 6px 8px #ffffff;
+  }
+  #page1{
+    margin:100px auto;
+    padding:60px 50px 10px;
+    text-align:center;
+    font-size: 40px;
+   
+  }
+ 
+  #page2 button{
+    font-size: 22px;
+    -webkit-appearance: none;
+    border:none;
+    background-color: #2e80b3;
+    color:white;
+    width:110px;
+    height:55px;
+    justify-content: space-between;
+    transition:0.2s;
+    border-radius:40px;
+    box-shadow: 6px -6px 8px #9d9d9d, -6px 6px 8px #ffffff;
+    margin: 20px;
+    padding: 20px;
+  }
+
+/*---------------------------------------------------------------------------------------------*/
+.control-buttons {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    background-color: rgba(3, 169, 244, 0.9);
+  }
+.control-buttons span {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #F44336;
+    color: #FFF;
+    padding: 15px 25px;
+    font-size: 30px;
+    text-align: center;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+/*
+.button{
+    background-color: aqua;
+    border-style: none;
+    border-radius:3px;
+    width: 50px;
+    height: 40px;
+    padding: 10px;
+}*/
+.face,.back{
+    width: 100%;
+    height: 100%;
+   position: absolute;
+   pointer-events: none;
+}
+.back{
+    background: white;
+    backface-visibility: hidden;
+}
+.card{
+    position: relative;
+   transform-style:preserve-3d;
+   
+  transition: all 2s cubic-bezier(0.175,0.885,0.32,1.275);
+    box-shadow: rgba(0, 0,0,0.2) 0px 5px 15px;
+
+}
+section{
+    display: grid;
+    justify-content: center;
+    grid-template-columns:repeat(4,8rem);
+    grid-template-rows:repeat(4,8rem);
+    gap: 2rem;
+   /* width: 1080px;*/
+    margin: 20px auto 0;
+    padding: 20px;
+    perspective: 800px;
+}
+.toggleCard{
+  transform:rotateY(180deg);
+}
+.face{
+    transform: rotateY(-180deg);
+}
+.name-game{
+    text-align: center;
+}
+.container{
+    width: 1080px;
+    margin: 20px auto 0;
+    background-color: #f6f6f6;
+    padding: 20px;
+    font-size: 24px;
+    overflow: hidden;
+    border: 2px solid #2196f3;
+}
+.container .plyer-lives-count{
+   float:left;
+   width: 50%;
+   text-align: left;
+
+}
+/*.container .button-res{
+    float:center;
+     text-align: center;
+     width:60%;
+
+  }*/
+.container .plyer-time{
+   float: right;
+   text-align: right;
+   width:50%;
+}
