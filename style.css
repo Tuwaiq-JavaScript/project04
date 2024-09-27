@@ -1,0 +1,321 @@
+:root{
+    --myBackground:linear-gradient(to left, rgba(183, 166, 69, 0.67), rgba(114, 66, 114, 0.64));
+}
+* {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body,
+html {
+    background: linear-gradient(to left, rgba(183, 166, 69, 0.67), rgba(114, 66, 114, 0.64));;
+    /* background: #fff; */
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    color: rgb(77, 70, 70);
+    font-size: 16px;
+    overflow: hidden;
+    text-align: center;
+   
+}
+
+
+
+h1 {
+    font-family: 'Amatic SC', cursive;
+    font-size: 300%;
+    padding: 20px;
+}
+
+header::before
+{
+    display: block;
+    content: '';
+    width: 100%;
+    background: #7c3e62;
+    height: 20px;
+}
+
+header {
+    margin: auto;
+    background: #eae0e8;
+    -webkit-box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2);
+
+
+}
+.button-menu {
+    border-radius: 6px;
+    background: hsla(303, 69%, 95%, 0.22);
+    /* height: 180px; */
+    font-size: 40px;
+    font-family: 'Amatic SC', cursive;
+    font-weight: bold;
+
+
+}
+
+#menu{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 10em;
+    height: 100em;
+    margin-top: 10rem;
+    perspective: 1000px;
+ 
+}
+.fa-star {
+    color: #fbed60;
+}
+
+p {
+    margin: 1%;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+.fa-undo {
+    padding: 0 20% 20% 20%;
+}
+
+.message-box .fa-undo {
+    padding: 10%;
+}
+
+.fa-undo:hover {
+    cursor: pointer;
+}
+
+#backToStartScreen{
+    float: left;
+    height: 40px;
+    width: 100px;
+    margin-left: 30px;
+    margin-top: 40px;
+    border-radius: 6px;
+    background: hsla(303, 69%, 95%, 0.22);
+    /* height: 180px; */
+    font-size: 24px;
+    font-family: 'Amatic SC', cursive;
+    font-weight: bold;
+}
+.game{
+    display: none;
+    max-width: 550px;
+    margin: auto;
+    height: 1000px;
+}
+.stats {
+    margin: 30px 0 10px 0;
+}
+
+ul.stats {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: row nowrap;
+    flex-flow: row nowrap;
+
+}
+
+ul.stats li {
+    display: inline-block;
+    padding: 5px;
+    width: 25%;
+}
+
+
+
+
+.container {
+    display: inline-block;
+    width: 23%;
+    margin: 1%;
+    position: relative;
+    -webkit-perspective: 800px;
+    perspective: 800px;
+   
+}
+
+.container::before {
+    content: "";
+    display: block;
+    padding-top: 100%;
+}
+
+
+
+/*card flip effect, credit to https://desandro.github.io/3dtransforms/docs/card-flip.html */
+
+.card {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-transition: -webkit-transform 0.3s;
+    /* transition: transform 0.5s; */
+    transition: transform 0.5s;
+    transition: transform 0.5s, -webkit-transform 0.5s;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+
+}
+
+.card figure {
+    margin: 0;
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius: 10px 5px;
+    -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.card figure:hover {
+    -webkit-box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+.front {
+    background-color: #db96be;
+
+}
+
+.back {
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+
+}
+
+.card.flipped,
+.card.solved {
+    -webkit-transform: rotateY( 180deg);
+    transform: rotateY( 180deg);
+}
+
+
+/* Card Backgrounds */
+
+[data-card-type="1"] .back {
+    background: #f5f5f5 url('../img/001-watering-can.svg');
+}
+
+[data-card-type="2"] .back {
+    background: #f5f5f5 url('../img/002-wellington.svg');
+}
+
+[data-card-type="3"] .back {
+    background: #f5f5f5 url('../img/003-rainbow.svg');
+}
+
+[data-card-type="4"] .back {
+    background: #f5f5f5 url('../img/004-rabbit.svg');
+}
+
+[data-card-type="5"] .back {
+    background: #f5f5f5 url('../img/005-bee.svg');
+}
+
+[data-card-type="6"] .back {
+    background: #f5f5f5 url('../img/006-sun.svg');
+}
+
+[data-card-type="7"] .back {
+    background: #f5f5f5 url('../img/007-plant.svg');
+}
+
+[data-card-type="8"] .back {
+    background: #f5f5f5 url('../img/008-easter-egg.svg');
+}
+
+/* POPUP MESSAGE ON WINNING */
+
+.game-over {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    z-index: 2;
+}
+
+.message-box {
+    background: rgb(255, 255, 255);
+    width: 70%;
+    max-width: 500px;
+    max-height: 500px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: none;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: column;
+    flex-flow: column;
+    padding: 5%;
+    border: 5px solid #fbed60;
+    border-radius: 20px;
+}
+
+ #player-points {
+    top: 200px;
+    position: relative;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    column-gap: 5px;
+    row-gap: 5px;
+    margin: auto;
+    border-radius: 8px;
+    background: hsla(303, 69%, 95%, 0.42);
+    perspective: 1000px;
+}
+#name {
+    border: black;
+    /* background-color: transparent; */
+    color: var(--our-black);
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+   /* margin-top: 50px;
+padding-top: 10px;
+    font-size: 16px; */
+    color: black;
+    font-family: 'Amatic SC', cursive;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* .task-box {
+    background-color:beige;
+    transform-style: preserve-3d;
+    transform-origin: center right;
+    transition:transform 300ms ease-in;
+  
+} */

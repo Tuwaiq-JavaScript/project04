@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Card</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css">
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Open+Sans:300" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="page22.css">
+    <script defer src="main.js"></script>
+</head>
+<body>
+ 
+        <header>
+     <h1>Memory Card Game</h1>
+     <!-- <button id="backToStartScreen">Back</button> -->
+ </header>
+ <!-- <div id="Page1">
+    Content of page 1
+    <a href="#" onclick="return show('Page2','Page1');">Show page 2</a>
+  </div>
+    
+  <div id="Page2" style="display:none">
+    Content of page 2
+    <a href="#" onclick="return show('Page1','Page2');">Show page 1</a>
+  </div> -->
+    
+     <div id="menu" >
+    <!--  -->
+    
+    <!-- <button class="button-menu" id="button-demo">Play</button>
+    <button class="button-menu" id="button-easy">Score</button> -->
+    <div class="name-box">
+        <form action="" method="get" name="myForm">
+            <label for="name">Enter Your Name :</label>
+            <input class="name"type="text" id="name" name="name"><br><br></form>
+        <!-- <input class="name-input"></input> -->
+        <a href="#" onclick="return show('page2','menu');">
+            <button style="width:100px ;" class="button-menu" id="button-play">Play</button>
+        </a>
+    </div>
+  
+</div>
+<!-- <div id="player-points" class="invisible">
+    <h2 id="viewScore">Your score: </h2>
+    <button id="button-back-to-menu" class="button-menu">Menu</button>
+</div> -->
+<div class="page2">
+    <!-- <a href="#" style="display:none;"onclick="return show('menu','page2');">
+        <button id="backToStartScreen">Back</button>
+    </a> -->
+   
+    <a href="#"  onclick="return show('menu','page2');">
+        <button id="backToStartScreen">Back</button>
+    </a>
+    <section id="page2"class="game">
+       
+
+        <ul class="stats">
+            <li id="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></li>
+            <li>
+                <p >Name</p>
+            <span class="name-input"></span>
+            </li>
+            <li>
+                <p>Attempts</p>
+                <p id="attempts">0</p>
+            </li>
+            <li><i class="fas fa-hourglass-start"></i>
+                <p><span id="minutes">00</span>:<span id="seconds">00</span></p>
+            </li>
+            <li><i id="reset" class="fas fa-undo"></i></li>
+        </ul>
+
+        <div id="memory-game">
+
+        </div>
+
+    </section>
+
+   
+</div>
+
+  
+    
+</body>
+</html>
